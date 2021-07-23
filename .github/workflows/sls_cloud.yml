@@ -15,7 +15,7 @@ jobs:
           node-version: 14
 
       - name: Installing SLS Cloud
-        run: yarn install
+        run: npm install -g
 
       - name: SLS CLoud Version
         run: cloud -v
