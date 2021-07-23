@@ -12,10 +12,10 @@ jobs:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
         with:
-          node-version: 12
+          node-version: 14
 
       - name: Installing SLS Cloud
-        run: npm i -g @serverless/cloud@latest
+        run: npm i -g @serverless/cloud@latest && npm -v && node -v
 
       - name: SLS CLoud Version
         run: cloud -v
