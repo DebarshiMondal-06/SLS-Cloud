@@ -1,0 +1,21 @@
+name: SLS CLoud Deploy
+
+on:
+  push: 
+    branches: 
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 12
+
+      - name: Installing SLS Cloud
+        run: npm i -g @serverless/cloud@latest
+        
+      - name: Deploying the APIs
+        run: cloud start
