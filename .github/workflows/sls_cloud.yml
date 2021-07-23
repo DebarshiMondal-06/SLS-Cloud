@@ -17,7 +17,7 @@ jobs:
       - name: Installing SLS Cloud
         run: npm install -g @serverless/cloud@0.0.18
       
-      - if: true
+      - if: false
         run: npm -v
 
       - name: SLS CLoud Version
