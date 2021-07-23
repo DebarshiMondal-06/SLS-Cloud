@@ -1,4 +1,4 @@
-name: SLS CLoud Deploy
+name: Node.js Package
 
 on:
   push: 
@@ -15,10 +15,7 @@ jobs:
           node-version: 14
 
       - name: Installing SLS Cloud
-        run: npm install -g @serverless/cloud@0.0.18
-      
-      - if: false
-        run: npm -v
+        run: npm install -g @serverless/cloud
 
       - name: SLS CLoud Version
         run: cloud -v
