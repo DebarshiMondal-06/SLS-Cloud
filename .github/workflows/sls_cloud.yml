@@ -16,6 +16,9 @@ jobs:
 
       - name: Installing SLS Cloud
         run: npm i -g @serverless/cloud@latest
+
+      - name: SLS CLoud Version
+        run: cloud -v
         
       - name: Deploying the APIs
-        run: cloud start
+        run: cloud activate 466732
